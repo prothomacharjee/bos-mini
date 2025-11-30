@@ -2,15 +2,16 @@
 
 namespace App\Jobs;
 
-use App\Mail\TaskCreatedMail;
 use App\Models\Task;
+use App\Mail\TaskCreatedMail;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
 
 class SendTaskCreatedMail implements ShouldQueue
 {
-    use Queueable;
+    use Queueable, Dispatchable;
 
     public function __construct(public Task $task) {}
 
