@@ -1,0 +1,127 @@
+{
+    "info": {
+        "name": "BOS-Mini",
+        "description": "BOS Mini API Documentation",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "projects",
+            "item": [
+                {
+                    "name": "[POST] api/projects",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/projects",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "projects"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"sample_text\",\n    \"client\": \"sample_text\",\n    \"start_date\": \"sample_text\",\n    \"end_date\": \"sample_text\",\n    \"status\": \"sample_text\"\n}",
+                            "options": []
+                        }
+                    }
+                },
+                {
+                    "name": "[GET] api/projects/{project}",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/projects/{project}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "projects",
+                                "{project}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "",
+                    "item": [
+                        {
+                            "name": "tasks",
+                            "item": [
+                                {
+                                    "name": "[POST] api/projects/{project}/tasks",
+                                    "request": {
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json",
+                                                "type": "text"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{base_url}}/api/projects/{project}/tasks",
+                                            "host": [
+                                                "{{base_url}}"
+                                            ],
+                                            "path": [
+                                                "api",
+                                                "projects",
+                                                "{project}",
+                                                "tasks"
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"title\": \"sample_text\",\n    \"deadline\": \"sample_text\",\n    \"assigned_user\": \"sample_text\",\n    \"status\": \"sample_text\"\n}",
+                                            "options": []
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://bos-mini.test"
+        }
+    ]
+}
